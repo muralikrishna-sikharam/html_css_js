@@ -1,0 +1,40 @@
+//validations login & password
+<html>
+ <head>
+ <script type = 'text/javascript'>
+function check()
+{	
+	var a= f1.t1.value;
+	var b=f1.t2.value;
+	if((a=="")&&(b==""))
+	{
+	alert("please enter username & password");
+	}
+	else
+	{
+	alert("login success");
+	}
+}
+</script>
+ </head>
+  <body>
+ <form name ='f1' action='#' method='post'>
+ <table>
+	<tr>
+	<th>user name </th>
+	<th><input type='text' name="t1"></th>
+	</tr>
+	<tr>	
+	<th>Password</th>
+	<th><input type='password' name="t2"></th>
+	</tr>
+	<tr>
+	<th colspan='2'>
+	<input type='button' name='b1' value='login' 
+	onclick="check()">
+	</th>
+	</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+//to combine 2 strings
+<html>
+ <head>
+ <script type = 'text/javascript'>
+function getFullName()
+{	
+	var fname= f1.t1.value;
+	var lname=f1.t2.value;
+	var fullname=fname + lname;
+	alert(fullname);
+}
+</script>
+ </head>
+  <body>
+ <form name ='f1' action='#' method='post'>
+First Name <input type='text' name="t1">
+<br>
+Last Name <input type='text' name="t2">
+<br>
+<input type='button' name='b1' value='full name' 
+onclick="getFullName()">
+</form>
+</body>
+</html>

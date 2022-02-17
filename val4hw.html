@@ -1,0 +1,65 @@
+//validations login & password using if else if
+<html>
+ <head>
+ <script type = 'text/javascript'>
+function check()
+{	
+	var a= f1.t1.value;
+	var b=f1.t2.value;
+	var c=f1.t3.value;
+	var d=f1.t4.value;
+	if((a=="")&&(b=="")&&(c=="")&&(d==""))
+		alert("please enter all values");
+	else if (a==b)
+	{
+		document.getElementById('s1').innerHTML="user name and password should not be the same";
+	}
+	else if (d.length<10)
+	{alert("please enter 10 digit mobile number");
+	}
+	else if ((b.length<4)&&(c.length<4))
+	{alert("password must in 4 char length");
+	}
+	else if(b!=c)
+	alert("password and confirm password must be same");
+	else if(a=="")
+		alert("please enter user name");
+	else if(b=="")
+		alert("please enter password");
+	else 
+	{
+		alert("Registration success!!!");
+	}
+}
+</script>
+ </head>
+  <body>
+ <form name ='f1' action='#' method='post'>
+ <span id='s1'style="color:red;"></span>
+ <table>
+	<tr>
+	<th>user name </th>
+	<th><input type='text' name="t1"></th>
+	</tr>
+	<tr>	
+	<th>Password</th>
+	<th><input type='password' name="t2"></th>
+	</tr>
+	<tr>	
+	<th>Confirm Password</th>
+	<th><input type='password' name="t3"></th>
+	</tr>
+	<tr>	
+	<th>Phone number</th>
+	<th><input type='text' name="t4"></th>
+	</tr>
+	<tr>
+	<th colspan='2'>
+	<input type='button' name='b1' value='Register' 
+	onclick="check()">
+	</th>
+	</tr>
+</table>
+</form>
+</body>
+</html>

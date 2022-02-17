@@ -1,0 +1,47 @@
+//validations login & password using if else if
+<html>
+ <head>
+ <script type = 'text/javascript'>
+function check()
+{	
+	var a= f1.t1.value;
+	var b=f1.t2.value;
+	if((a=="")&&(b==""))
+		alert("please enter username & password");
+	else if (a==b)
+	{
+		document.getElementById('s1').innerHTML="user name and password should not be the same";
+	}
+	else if(a=="")
+		alert("please enter user name");
+	else if(b=="")
+		alert("please enter password");
+	else if((a=="admin")&&(b=="sathya"))
+		alert("registered !welcome to Sathya Technology");
+	else 
+		alert("invalid username or password");
+}
+</script>
+ </head>
+  <body>
+ <form name ='f1' action='#' method='post'>
+ <span id='s1'style="color:red;"></span>
+ <table>
+	<tr>
+	<th>user name </th>
+	<th><input type='text' name="t1"></th>
+	</tr>
+	<tr>	
+	<th>Password</th>
+	<th><input type='password' name="t2"></th>
+	</tr>
+	<tr>
+	<th colspan='2'>
+	<input type='button' name='b1' value='login' 
+	onclick="check()">
+	</th>
+	</tr>
+</table>
+</form>
+</body>
+</html>
